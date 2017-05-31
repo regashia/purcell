@@ -1,3 +1,6 @@
+;; Theme
+(require-package 'zenburn-theme)
+
 ;; Set EDITOR to emacsclient
 (setenv "EDITOR" "emacsclient")
 
