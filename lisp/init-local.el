@@ -30,8 +30,8 @@
   (define-key minibuffer-local-map (kbd "C-j") 'skk-kakutei)
   ;; ¥ と \ を同じものとして扱う
   (define-key key-translation-map (kbd "C-¥") (kbd "C-\\"))
-  ;; C-c C-j で skk-mode 起動
-  (global-set-key (kbd "C-c C-j") 'skk-mode)
+  ;; C-\ で skk-mode 起動
+  (global-set-key (kbd "C-\\") 'skk-mode)
   ;; ";" を sticky キーに設定
   (setq skk-sticky-key ";"))
 
