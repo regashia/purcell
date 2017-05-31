@@ -1,16 +1,18 @@
-;; Theme
+;;; Theme
 (require-package 'zenburn-theme)
 
-;; Set EDITOR to emacsclient
+
+;;; setenv
 (setenv "EDITOR" "emacsclient")
 
-;; direnv
+
+;;; direnv
 (when (maybe-require-package 'direnv)
   (direnv-mode))
 
-;; ddskk
+
+;;; ddskk
 (when (maybe-require-package 'ddskk)
-  ;; google-ime-skk
   (setq skk-server-prog "google-ime-skk")      ; google-ime-skk の場所
   (setq skk-server-inhibit-startup-server nil) ; 辞書サーバが起動していなかったときに Emacs からプロセスを立ち上げる
   (setq skk-server-host "localhost")           ; サーバー機能を利用
@@ -21,7 +23,7 @@
   (define-key minibuffer-local-map (kbd "C-j") 'skk-kakutei)
   ;; ¥ と \ を同じものとして扱う
   (define-key key-translation-map (kbd "C-¥") (kbd "C-\\"))
-  ;; C-\ で skk-mode 起動
+  ;; C-c C-j で skk-mode 起動
   (global-set-key (kbd "C-c C-j") 'skk-mode)
   ;; ";" を sticky キーに設定
   (setq skk-sticky-key ";"))
