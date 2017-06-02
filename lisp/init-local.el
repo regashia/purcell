@@ -26,12 +26,10 @@
   (setq skk-server-portnum 55100)              ; ポートは google-ime-skk
   (setq skk-share-private-jisyo t)             ; 複数 skk 辞書を共有
 
+  ;; C-x C-j で skk-mode 起動
+  (global-set-key (kbd "C-x C-j") 'skk-mode)
   ;; ミニバッファでは C-j を改行にしない
   (define-key minibuffer-local-map (kbd "C-j") 'skk-kakutei)
-  ;; ¥ と \ を同じものとして扱う
-  (define-key key-translation-map (kbd "C-¥") (kbd "C-\\"))
-  ;; C-\ で skk-mode 起動
-  (global-set-key (kbd "C-\\") 'skk-mode)
   ;; ";" を sticky キーに設定
   (setq skk-sticky-key ";"))
 
