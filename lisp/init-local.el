@@ -6,6 +6,12 @@
 (setenv "EDITOR" "emacsclient")
 
 
+;;; Shell script
+(add-hook 'sh-mode-hook
+          (lambda ()
+            (setq tab-width 2)))
+
+
 ;;; fish
 (when (maybe-require-package 'fish-mode)
   (add-hook 'fish-mode-hook
