@@ -31,6 +31,9 @@
   ;; ミニバッファでは C-j を改行にしない
   (define-key minibuffer-local-map (kbd "C-j") 'skk-kakutei)
   ;; ";" を sticky キーに設定
-  (setq skk-sticky-key ";"))
+  (setq skk-sticky-key ";")
+  ;; isearch-mode でも使用可能にする
+  (add-hook 'isearch-mode-hook 'skk-isearch-mode-setup)
+  (add-hook 'isearch-mode-end-hook 'skk-isearch-mode-cleanup))
 
 (provide 'init-local)
