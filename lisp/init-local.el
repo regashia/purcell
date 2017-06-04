@@ -1,4 +1,5 @@
 ;;; Theme
+(require-package 'monokai-theme)
 (require-package 'zenburn-theme)
 
 
