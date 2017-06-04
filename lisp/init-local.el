@@ -13,13 +13,6 @@
             (setq tab-width 2)))
 
 
-;;; fish
-(when (maybe-require-package 'fish-mode)
-  (add-hook 'fish-mode-hook
-            (lambda ()
-              (setq tab-width 2))))
-
-
 ;;; direnv
 (when (maybe-require-package 'direnv)
   (direnv-mode))
