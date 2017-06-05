@@ -48,4 +48,9 @@
   (add-hook 'isearch-mode-hook 'skk-isearch-mode-setup)
   (add-hook 'isearch-mode-end-hook 'skk-isearch-mode-cleanup))
 
+
+;;; Multi Term
+(when (maybe-require-package 'multi-term)
+  (global-set-key (kbd "M-m '") 'multi-term))
+
 (provide 'init-local)
