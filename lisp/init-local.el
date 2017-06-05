@@ -13,6 +13,14 @@
             (setq tab-width 2)))
 
 
+;;; C-a
+(defun back-to-indentation-or-beginning () (interactive)
+       (if (= (point) (progn (back-to-indentation) (point)))
+           (beginning-of-line)))
+
+(global-set-key (kbd "C-a") 'back-to-indentation-or-beginning)
+
+
 ;;; direnv
 (when (maybe-require-package 'direnv)
   (direnv-mode))
