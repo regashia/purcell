@@ -10,7 +10,9 @@
 ;;; Shell script
 (add-hook 'sh-mode-hook
           (lambda ()
-            (setq tab-width 2)))
+            (setq tab-width 2)
+            (setq sh-basic-offset 2)
+            (setq sh-indentation 2)))
 
 
 ;;; C-a
