@@ -21,6 +21,10 @@
 (global-set-key (kbd "C-a") 'back-to-indentation-or-beginning)
 
 
+;;; M-m
+(global-unset-key (kbd "M-m"))
+
+
 ;;; direnv
 (when (maybe-require-package 'direnv)
   (direnv-mode))
