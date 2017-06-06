@@ -7,14 +7,6 @@
 (setenv "EDITOR" "emacsclient")
 
 
-;;; Shell script
-(add-hook 'sh-mode-hook
-          (lambda ()
-            (setq tab-width 2)
-            (setq sh-basic-offset 2)
-            (setq sh-indentation 2)))
-
-
 ;;; C-a
 (defun back-to-indentation-or-beginning ()
   (interactive)
@@ -55,6 +47,11 @@
 ;;; Multi Term
 (when (maybe-require-package 'multi-term)
   (global-set-key (kbd "M-m '") 'multi-term))
+
+
+;;; EditorConfig
+(when (maybe-require-package 'editorconfig)
+  (editorconfig-mode 1))
 
 
 ;;; git-mode
