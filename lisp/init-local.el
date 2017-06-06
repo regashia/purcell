@@ -53,8 +53,4 @@
 (when (maybe-require-package 'editorconfig)
   (editorconfig-mode 1))
 
-
-;;; git-mode
-(require-package 'git-mode)
-
 (provide 'init-local)
