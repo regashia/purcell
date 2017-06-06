@@ -56,4 +56,8 @@
 (when (maybe-require-package 'multi-term)
   (global-set-key (kbd "M-m '") 'multi-term))
 
+
+;;; git-mode
+(require-package 'git-mode)
+
 (provide 'init-local)
