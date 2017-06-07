@@ -53,4 +53,8 @@
 (when (maybe-require-package 'editorconfig)
   (editorconfig-mode 1))
 
+
+;;; Markdown
+(require-package 'markdown-preview-mode)
+
 (provide 'init-local)
