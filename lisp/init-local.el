@@ -73,4 +73,8 @@
       (set (make-local-variable 'company-backends) '(company-go))
       (add-hook 'before-save-hook 'gofmt-before-save))))
 
+
+;;; Rails
+(projectile-rails-global-mode)
+
 (provide 'init-local)
