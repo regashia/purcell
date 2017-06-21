@@ -135,4 +135,13 @@
   (setq-local shr-put-image-function 'shr-put-image-alt))
 (add-hook 'eww-mode-hook 'eww-mode-hook--disable-image)
 
+
+;;; google-translate
+(when (maybe-require-package 'google-translate)
+  ;; 翻訳のデフォルト値を設定 (en -> zh)
+  (custom-set-variables
+    '(google-translate-default-source-language "en")
+    '(google-translate-default-target-language "zh"))
+  (global-set-key (kbd "M-m x g t") 'google-translate-at-point))
+
 (provide 'init-local)
