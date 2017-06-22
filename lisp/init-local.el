@@ -27,6 +27,25 @@
 (global-unset-key (kbd "M-m"))
 
 
+;;; Change window size
+(global-set-key (kbd "M-m M-f")
+  (lambda ()
+    (interactive)
+    (switch-window-mvborder-right 10)))
+(global-set-key (kbd "M-m M-b")
+  (lambda ()
+    (interactive)
+    (switch-window-mvborder-left 10)))
+(global-set-key (kbd "M-m M-n")
+  (lambda ()
+    (interactive)
+    (switch-window-mvborder-down 10)))
+(global-set-key (kbd "M-m M-p")
+  (lambda ()
+    (interactive)
+    (switch-window-mvborder-up 10)))
+
+
 ;;; direnv
 (when (maybe-require-package 'direnv)
   (direnv-mode))
