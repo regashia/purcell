@@ -9,7 +9,7 @@
 
 ;;; Unix style C-h
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
-(define-key key-translation-map (kbd "M-h") (kbd "M-<DEL>"))
+(define-key key-translation-map (kbd "M-h") (kbd "<C-backspace>"))
 (define-key key-translation-map (kbd "C-?") (kbd "C-h"))
 (define-key key-translation-map (kbd "M-?") (kbd "M-h"))
 
