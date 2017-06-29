@@ -79,10 +79,7 @@
 
 ;;; Multi Term
 (when (maybe-require-package 'multi-term)
-  (global-set-key (kbd "M-m '") 'multi-term)
-  (add-hook 'term-mode-hook
-    (lambda ()
-      (local-set-key (kbd "M-h") 'term-send-backward-kill-word))))
+  (global-set-key (kbd "M-m '") 'multi-term))
 
 
 ;;; EditorConfig
