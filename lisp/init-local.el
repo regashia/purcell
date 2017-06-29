@@ -46,6 +46,13 @@
     (switch-window-mvborder-up 10)))
 
 
+;;; avy
+(when (maybe-require-package 'avy)
+  (global-set-key (kbd "M-m j j") 'avy-goto-char)
+  (global-set-key (kbd "M-m j w") 'avy-goto-word-1)
+  (global-set-key (kbd "M-m j l") 'avy-goto-line))
+
+
 ;;; direnv
 (when (maybe-require-package 'direnv)
   (direnv-mode))
