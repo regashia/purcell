@@ -171,4 +171,9 @@
     '(google-translate-default-target-language "zh"))
   (global-set-key (kbd "M-m x g t") 'google-translate-at-point))
 
+
+;;; TypeScript
+(when (maybe-require-package 'typescript-mode)
+  (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode)))
+
 (provide 'init-local)
