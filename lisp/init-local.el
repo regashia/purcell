@@ -28,22 +28,10 @@
 
 
 ;;; Change window size
-(global-set-key (kbd "M-m M-f")
-  (lambda ()
-    (interactive)
-    (switch-window-mvborder-right 10)))
-(global-set-key (kbd "M-m M-b")
-  (lambda ()
-    (interactive)
-    (switch-window-mvborder-left 10)))
-(global-set-key (kbd "M-m M-n")
-  (lambda ()
-    (interactive)
-    (switch-window-mvborder-down 10)))
-(global-set-key (kbd "M-m M-p")
-  (lambda ()
-    (interactive)
-    (switch-window-mvborder-up 10)))
+(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-C-<down>") 'shrink-window)
+(global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
 
 ;;; avy
